@@ -203,6 +203,25 @@ section.ff3 {
 
   .ff3-form {
     margin-top: 3em;
+
+    input {
+      margin-right: 0.5em;
+      padding: 1em;
+      border: 1px solid #DFDFDF;
+      box-sizing: border-box;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #00C88C;
+      border: none;
+      border-radius: 4px;
+      color: white;
+
+      padding: 1em 1.5em;
+      // margin-right: 1em;
+      cursor: pointer;
+    }
   }
 }
 
