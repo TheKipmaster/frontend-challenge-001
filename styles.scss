@@ -93,11 +93,12 @@ Header.masthead {
     }
   }
 
-  div.content {
+  div.ff1 {
     display: flex;
-    flex: 1;
     flex-direction: row;
-    justify-content: space-around;
+    align-items: center;
+    // justify-content: space-around;
+    // flex: 1;
     // font-size: 1.5em;
     color: white;
     margin: 6em 8em;
@@ -109,12 +110,15 @@ Header.masthead {
 
       p {
         font-size: 1rem;
+        line-height: 24px;
+        margin: 0;
       }
 
       a {
         display: flex;
         align-items: center;
         color: white;
+        margin-top: 2em;
 
         img {
           margin-right: 10px;
@@ -164,10 +168,89 @@ main {
   color: #3D3D3D;
 }
 
+section {
+  &.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .text {
+      text-align: center;
+      line-height: 28px;
+
+      padding: 0 7em;
+    }
+
+    &.ff3 {
+      margin: 4em 0;
+
+      .form {
+        margin-top: 3em;
+
+        input {
+          margin-right: 0.5em;
+          padding: 1em;
+          border: 1px solid #DFDFDF;
+          box-sizing: border-box;
+          border-radius: 4px;
+        }
+
+        button {
+          background-color: #00C88C;
+          border: none;
+          border-radius: 4px;
+          color: white;
+
+          padding: 1em 1.5em;
+          // margin-right: 1em;
+          cursor: pointer;
+        }
+      }
+
+    }
+
+    &.ff5 {
+      padding: 4em 14.25em;
+
+      .image {
+        // flex: 1;
+
+        margin-top: 3em;
+        margin-bottom: 1em;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    &.ff6 {
+      padding: 2em 14.25em 6em 14.25em;
+
+      .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // flex: 1;
+
+        margin-top: 3em;
+        margin-bottom: 2em;
+
+        img {
+          width: 30%;
+        }
+      }
+
+    }
+  }
+
+  // &.row {}
+}
+
 section.ff2 {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  align-items: center;
   padding: 7.5em 10.25em 7.5em 14.25em;
 
   .ff2-text {
@@ -194,41 +277,11 @@ section.ff2 {
   }
 }
 
-section.ff3 {
-  margin: 4em 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-
-  .ff3-form {
-    margin-top: 3em;
-
-    input {
-      margin-right: 0.5em;
-      padding: 1em;
-      border: 1px solid #DFDFDF;
-      box-sizing: border-box;
-      border-radius: 4px;
-    }
-
-    button {
-      background-color: #00C88C;
-      border: none;
-      border-radius: 4px;
-      color: white;
-
-      padding: 1em 1.5em;
-      // margin-right: 1em;
-      cursor: pointer;
-    }
-  }
-}
-
 section.ff4 {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  // align-items: center;
+  // justify-content: space-around;
   padding: 6em 10.25em 6em 14.25em;
 
   h2 {
@@ -255,67 +308,6 @@ section.ff4 {
 
     img {
       width: 100%;
-    }
-  }
-}
-
-section.ff5 {
-  padding: 4em 14.25em;
-  // margin: 4em 0;
-  .ff5-text {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    align-items: center;
-
-    text-align: center;
-    line-height: 28px;
-
-    padding: 0 7em;
-  }
-
-  .ff5-image {
-    flex: 1;
-
-    margin-top: 3em;
-    margin-bottom: 1em;
-
-    img {
-      width: 100%;
-    }
-  }
-}
-
-section.ff6 {
-  padding: 2em 14.25em 6em 14.25em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .ff6-text {
-    display: flex;
-    flex: 5;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-    line-height: 28px;
-
-    padding: 0 7em;
-  }
-
-  .ff6-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-
-    margin-top: 3em;
-    margin-bottom: 2em;
-
-    img {
-      width: 30%;
     }
   }
 }
