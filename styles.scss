@@ -1,4 +1,5 @@
 
+// Variables
 :root {
   --brand-color:           #00C88C;
   --brand-color-secondary: #5E20A4;
@@ -37,10 +38,9 @@ body {
   }
 }
 
-header.masthead {
+.masthead {
   display: flex;
   flex-direction: column;
-  // align-items: center;
   background-color: var(--brand-color-secondary);
   mix-blend-mode: overlay;
   background-size: cover;
@@ -103,21 +103,15 @@ header.masthead {
     }
   }
 
-  div.ff1 {
+  .banner-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     flex: 1;
     align-items: center;
-    // display: flex;
-    // flex-direction: row;
-    // align-items: center;
-    // justify-content: space-around;
-    // flex: 1;
-    // font-size: 1.5em;
     color: white;
     margin: 0 3em;
 
-    .ff1-text {
+    .banner-text {
       display: flex;
       flex: 1;
       flex-direction: column;
@@ -140,7 +134,7 @@ header.masthead {
       }
     }
 
-    div.ff1-image {
+    .banner-image {
       display: flex;
       justify-content: center;
       flex: 1;
@@ -153,7 +147,7 @@ header.masthead {
   }
 }
 
-section.notification {
+.notification {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -164,7 +158,7 @@ section.notification {
   border-bottom: 1px solid var(--grey-88);
   font-weight: bold;
 
-  div.sarah {
+  .image {
     width: 3rem;
     margin-right: 15px;
     img {
@@ -173,13 +167,11 @@ section.notification {
       border: 4px solid white;
       border-radius: 50px;
       filter: drop-shadow(0px 1px 1px 0px rgba(0, 0, 0, 0.2));
-      // box-shadow: 0px 1px 1px 0px #000000 20%;
     }
   }
 }
 
 main {
-  // padding: 0 10.25em 0 14.25em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -196,11 +188,9 @@ section {
     .text {
       text-align: center;
       line-height: 28px;
-
-      // padding: 0 7em;
     }
 
-    &.ff3 {
+    &.ff2 {
       padding: 4em 0;
 
       .form {
@@ -224,19 +214,16 @@ section {
           color: white;
 
           padding: 1em 1.5em;
-          // margin-right: 1em;
           cursor: pointer;
         }
       }
 
     }
 
-    &.ff5 {
+    &.ff4 {
       padding: 4em 14.25em;
-      // padding: 4em 15vmin;
 
       .image {
-        // flex: 1;
 
         margin-top: 3em;
         margin-bottom: 1em;
@@ -247,7 +234,7 @@ section {
       }
     }
 
-    &.ff6 {
+    &.ff5 {
       padding: 2em 0 6em 0;
       max-width: 768px;
 
@@ -255,7 +242,6 @@ section {
         display: flex;
         align-items: center;
         justify-content: center;
-        // flex: 1;
 
         margin-top: 3em;
         margin-bottom: 2em;
@@ -269,8 +255,6 @@ section {
   }
 
   &.row {
-    // display: flex;
-    // flex-direction: row;
     display: grid;
     grid-gap: 3em;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -294,20 +278,15 @@ section {
       }
     }
 
-    &.ff2 {
+    &.ff1 {
       padding: 6em 14.25em 6em 14.25em;
-
-      // .text {
-      //   flex: 5
-      //   grid-column: span 5;
-      // }
 
       .image {
         width: 125%;
       }
     }
 
-    &.ff4 {
+    &.ff3 {
       padding: 6em 14.25em;
 
       h2 {
@@ -320,7 +299,6 @@ section {
 
       .image {
         flex: 19;
-        // margin-right: 3em;
       }
     }
   }
@@ -377,7 +355,7 @@ footer {
   .footer-bottom {
     width: 83%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     align-items: center;
 
     margin: 5em 0;
@@ -413,8 +391,7 @@ footer {
         margin: 0 0.5em;
       }
 
-      // refactor class name for maintainability
-      div {
+      .social-icon {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -443,6 +420,8 @@ footer {
   }
 }
 
+// Styles for screens thinner than 768px
+
 @media (max-width: 768px) {
   body {
     text-align: center;
@@ -456,26 +435,23 @@ footer {
     }
   }
 
-  div.wrapper {
-    overflow-x: hidden;
-    width: 100%;
-  }
+  .masthead {
+    background-position: center;
 
-  header.masthead {
-    div.ff1 {
+    .banner-content {
       margin: 0;
       padding: 0 1em;
 
-      .ff1-text {
+      .banner-text {
         align-items: center;
       }
     }
   }
 
-  section.notification {
+  .notification {
     padding: 3em 0;
     justify-content: space-evenly;
-    div.sarah, a, span {
+    .image, a, span {
       margin-bottom: 0.5em;
     }
 
@@ -483,13 +459,13 @@ footer {
 
   section {
     &.column {
-      &.ff3,
-      &.ff5,
-      &.ff6 {
+      &.ff2,
+      &.ff4,
+      &.ff5 {
         padding: 4em 1em;
       }
 
-      &.ff3 {
+      &.ff2 {
         .form {
           flex-direction: column;
           width: 100%;
@@ -505,7 +481,7 @@ footer {
         }
       }
 
-      &.ff6 {
+      &.ff5 {
         .image {
           margin: 0;
 
@@ -521,8 +497,8 @@ footer {
     }
 
     &.row {
-      &.ff2,
-      &.ff4 {
+      &.ff1,
+      &.ff3 {
         padding: 7.5em 1em;
 
         .image {
@@ -530,7 +506,7 @@ footer {
         }
       }
 
-      &.ff2 {
+      &.ff1 {
         .text {
           grid-row: 2;
         }
